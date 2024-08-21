@@ -1,20 +1,49 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="purple"><br>
+    <ion-title >
+      Component
     </ion-title>
+    <ion-searchbar></ion-searchbar><br>
+    <ion-segment color="pink">
+      <ion-segment-button value="all">
+        <ion-label color="light" >All</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        <ion-label color="light" >Favorites</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
+
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Fruit" interface="popover" placeholder="Select fruit">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+<ion-toggle aria-label="Secondary toggle" color="pink" [checked]="true"></ion-toggle>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button expand="block" (click)=" presentToast('bottom')" color="success">Present Toast At the Bottom</ion-button>
+
 </ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button color="purple">
+    <ion-icon name="chevron-up-circle" color="light"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button>
+      <ion-icon name="document" color="pink"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="image-outline" color="success"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="megaphone-outline" color="danger"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
